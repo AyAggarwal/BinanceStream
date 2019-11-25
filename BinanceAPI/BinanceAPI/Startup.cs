@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using BinanceAPI.Models;
 using StackExchange.Redis;
+using Binance.Net;
+using Binance.Net.Interfaces;
 
 namespace BinanceAPI
 {
@@ -28,6 +30,9 @@ namespace BinanceAPI
             {
                 Console.WriteLine((string)message);
             });
+            IBinanceSocketClient socketClient = new BinanceSocketClient();
+            IBinanceDataProvider prov = new BinanceDataProvider(socketClient);
+            prov.Start();
         }
 
         public IConfiguration Configuration { get; }
@@ -36,6 +41,8 @@ namespace BinanceAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<IBinanceSocketClient, BinanceSocketClient>();
+            services.AddSingleton<IBinanceDataProvider, BinanceDataProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

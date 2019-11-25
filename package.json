@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "graphql-redis-subscriptions": "^2.1.1",
+    "pubsub-js": "^1.7.0"
+  }
+}

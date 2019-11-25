@@ -55,7 +55,7 @@ namespace BinanceAPI.Models
                 "TT{1}\n" +
                 "TID:{2}\n"+
                 "SYM:{3}\n"+
-                "PRICE:{4}\n"+
+                "P:{4}\n"+
                 "Q:{5}",
                 data.EventTime, data.TradeTime, data.TradeId.ToString(), data.Symbol, data.Price, data.Quantity
                 );

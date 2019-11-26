@@ -46,7 +46,7 @@ namespace BinanceAPI.Models
                 {
                     ReceiveTime = data.EventTime, //Time in which the trade was received
                     TradeTime = data.TradeTime,// Time in which the trade was executed
-                    TradeId = data.TradeId.ToString(), // Trade ID as sent by the exchange
+                    TradeId = data.BuyerOrderId.ToString(), // Trade ID as sent by the exchange
                     Symbol = data.Symbol, // Represents the asset being traded
                     Price = data.Price, // Trade price
                     Qty = data.Quantity  // Quantity of assets traded

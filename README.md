@@ -7,6 +7,7 @@
 
 
 **usage:**
+run an instance of `redis-server` on local terminal
 
 cd into BinanceAPI directory and run the following:
 `dotnet build`

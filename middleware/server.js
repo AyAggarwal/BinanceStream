@@ -10,7 +10,7 @@ test = "";
 
 client.on("message", function(channel, message) {
     var object = JSON.parse(message);
-    var string = "\n{ReceiveTime: " + object.ReceiveTime + ", TradeTime: " + object.TradeTime + ", TradeID: " + object.TradeID + ", Symbol: " + object.Symbol + ", Price: " + object.Price + ", Qty: " + object.Qty + "}\n\n";
+    var string = "\n{ReceiveTime: " + object.ReceiveTime + ", TradeTime: " + object.TradeTime + ", TradeID: " + object.TradeId + ", Symbol: " + object.Symbol + ", Price: " + object.Price + ", Qty: " + object.Qty + "}\n\n";
     recenttrades.push(string);
 });
 

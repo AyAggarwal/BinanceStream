@@ -1,4 +1,4 @@
-**HashDex Engineering Challenge**
+**Binance data stream**
 
 
 1. BinanceAPI contains c# .NET server to get information from Binance and publish it on Redis pubsub channel "trades" on default port

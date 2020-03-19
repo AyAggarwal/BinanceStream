@@ -28,4 +28,4 @@ The file `BinanceDataProvider.cs` in BinanceAPI/Models does most of the heavy li
 This is a simple api setup in express.js to listen to subscribe to the redis `trades` channel. This was created after I spent nontrivial time setting up a React.js front end. I found that the browswer is unable to open a TCP connection to listen to redis pubsub in real time, so this must be done in a middleware server. In order for this information to hit the front end, I format and push new trades into an array and expose it as an api call on port 4000.
 
 **React**
-I made a react client because it's what I am comfortable with and it looks nice. In order to update trades, I call the express api every second and update the information on screen. Currently, it is not efficient as react must iterate through the returned loop every call to print. This can be solved with some caching. 
+\In order to update trades, I call the express api every second and update the information on screen. Currently, it is not efficient as react must iterate through the returned loop every call to print. This can be solved with some caching. 
